@@ -9,6 +9,13 @@ export const headerData = {
         width: 120,
         height: 28,
     },
+
+    utils: [
+    { id: "search", label: "검색", icon: img("icon_search.svg"), href: "#"},
+    { id: "account", label: "마이", icon: img("icon_myp.svg"),  href: "#" },
+    { id: "cart", label: "장바", icon: img("icon_cart.svg"),  href: "#" },
+  ],
+  
     menus: [
         { id: "Hero", label: "Hero", href: "#Hero", type: "section" },
         { id: "Brand", label: "Brand", href: "#Brand", type: "section" },
