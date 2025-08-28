@@ -6,7 +6,6 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { heroSlides } from '../util/hero'
 import '../styles/sections/hero.scss'
-
 const Hero = () => {
   return (
     <div className='hero-container'>
@@ -21,9 +20,12 @@ const Hero = () => {
           type: 'fraction'
         }}
         loop={true}
-        // autoplay={true}
+      //  autoplay={true}
+
       >
+
         {heroSlides.map((slide) => (
+
           <SwiperSlide
             key={slide.id}
             className={`hero-slide ${slide.id}`}
@@ -32,11 +34,10 @@ const Hero = () => {
             <div className="inner">
               <div className="t-wrap">
 
-                <h2
-                  className="tit"
-                  dangerouslySetInnerHTML={{ __html: slide.title }}
+                <h2 className='tit'
+                dangerouslySetInnerHTML={{ __html: slide.title }}
                 />
-
+                 
                 <p className="txt">
                   {slide.subtitle}
                 </p>
@@ -48,11 +49,12 @@ const Hero = () => {
           </SwiperSlide>
         ))}
 
-        <div className="hero-nav">
-          <div className="arr-prev">prev</div>
-          <div className="swiper-pagination"></div>
-          <div className="arr-next">next</div>
-        </div>
+     <div className="hero-nav">
+      <div className="arr-prev">prev</div>
+      <div className="swiper-pagination"></div>
+      <div className="arr-next">next</div>
+     </div>
+
       </Swiper>
     </div>
   )

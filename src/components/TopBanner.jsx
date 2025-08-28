@@ -27,10 +27,14 @@ const TopBanner = ({onClick}) => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="closeBtn"  onClick={onClick}>
+      <div 
+      className="closeBtn" 
+      onClick={onClick}
+      style={{backgroundImage:`url(${closeBtn})`}}
+      >
         close btn
       </div>
-      {/* <img src={closeBtn} alt="" /> */}
+  
     </div>
   )
 }

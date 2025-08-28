@@ -9,20 +9,14 @@ export const headerData = {
         width: 120,
         height: 28,
     },
-
-    utils: [
-    { id: "search", label: "검색", icon: img("icon_search.svg"), href: "#"},
-    { id: "account", label: "마이", icon: img("icon_myp.svg"),  href: "#" },
-    { id: "cart", label: "장바", icon: img("icon_cart.svg"),  href: "#" },
-  ],
-  
     menus: [
-        { id: "Hero", label: "Hero", href: "#Hero", type: "section" },
-        { id: "Brand", label: "Brand", href: "#Brand", type: "section" },
-        { id: "Products", label: "Products", href: "#Products", type: "section" },
-        { id: "Reviews", label: "Reviews", href: "#Reviews", type: "section" },
-        { id: "Cta", label: "Cta", href: "#Cta", type: "section" },
-    ],
+  { id: "Hero",       label: "Hero",       href: "#Hero",       type: "section" },
+  { id: "Cta",        label: "Cta",        href: "#Cta",        type: "section" },
+  { id: "Hello",      label: "Hello",      href: "#Hello",      type: "section" },
+  { id: "Collection", label: "Collection", href: "#Collection", type: "section" },
+  { id: "SkicCare",   label: "SkicCare",   href: "#SkicCare",   type: "section" },
+  { id: "Instar",     label: "Instar",     href: "#Instar",     type: "section" },
+],
     // 상단 공지/배너 (TopBanner용)
     topBanner: {
         enabled: true,
@@ -36,5 +30,13 @@ export const headerData = {
         background: "#DC272D",
         color: "#fff",
     },
+
+    utils: [
+        { id: "search", label: "검색", icon: img("icon_search.svg"), href: "#" },
+        { id: "account", label: "마이", icon: img("icon_myp.svg"), href: "#" },
+        { id: "cart", label: "장바", icon: img("icon_cart.svg"), href: "#" },
+    ],
+
+
 
 }

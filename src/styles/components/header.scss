@@ -4,11 +4,12 @@ header {
     top: 4rem;
     width: 100%;
     height: 10.5rem;
-    transition: top .3 ;
+    transition: top .3s ease;
     .inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        max-width: 160rem !important;
         nav ul {
             display: flex;
             gap: 2rem;
@@ -38,7 +39,7 @@ header {
             left: 50%;
             transform: translateX(-50%);
         }
-        .util-lst {
+        .util-lst{
             display: flex;
             gap: 1.2rem;
 

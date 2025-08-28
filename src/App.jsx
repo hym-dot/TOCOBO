@@ -6,25 +6,33 @@ import Brand from "./sections/Brand"
 import Cta from "./sections/Cta"
 import Reviews from "./sections/Reviews"
 import Products from "./sections/Products"
-import TopBanner from "./components/TopBanner"
-import TopBtn from "./components/TopBtn"
 import "./styles/main.scss"
+import TopBanner from "./components/TopBanner"
 import { useState } from "react"
+import TopBtn from "./components/TopBtn"
+import Hello from "./sections/Hello"
 function App() {
 
-  const [topBanner, setTopBanner] = useState("")
+  const [topBanner,setTopBanner]=useState("")
 
-  const upTopBanner = () => {
+  const upTopBanner =()=>{
     setTopBanner("up")
   }
+
   return (
     <div className={`app-container  ${topBanner}`}>
-      <TopBtn />
-      <TopBanner onClick={upTopBanner} />
+      <TopBtn/>
+      <TopBanner onClick={upTopBanner}/>
       <Header />
       <main>
         <section id="Hero" className="Section">
           <Hero />
+        <section id="Cta" className="Section">
+          <Cta />
+        </section>
+        <section id="Reviews" className="Section">
+          <Hello />
+        </section>
         </section>
         <section id="Brand" className="Section">
           <Brand />
@@ -34,9 +42,6 @@ function App() {
         </section>
         <section id="Reviews" className="Section">
           <Reviews />
-        </section>
-        <section id="Cta" className="Section">
-          <Cta />
         </section>
       </main>
       <Footer />
