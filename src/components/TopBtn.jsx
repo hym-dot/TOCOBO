@@ -1,22 +1,24 @@
 import React from 'react'
 import '../styles/components/topbtn.scss'
 import useSmoothScroll from '../hooks/useSmoothScroll'
+
 const TopBtn = () => {
   const scrollTo = useSmoothScroll()
   return (
-    <div>
-      {/* icon_top.svg */}
+    <div className='top-btn-container'>
       <button
         onClick={(e) => {
           e.preventDefault()
           scrollTo('Hero')
         }}
-        className='top-btn'>🔺</button>
-      {/* icon_talk.svg */}
+        className='top-btn'>
+        <img src="/img/icon_top.svg" alt="위로 올라가는 버튼" />
+      </button>
+
       <a href="#" className="talk-btn">
-        TCB
+        <img src="/img/icon_talk.svg" alt="1대1 상담 버튼" />
+        <p className='talk-text'>1:1 Talk</p>
       </a>
-      <p>1:1 Talk</p>
     </div>
   )
 }
