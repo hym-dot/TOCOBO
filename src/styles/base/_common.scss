@@ -9,6 +9,17 @@
         }
     }
 
+    &.scrolled {
+        header {
+            background: #ffffff;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 1) 24%, rgba(255, 255, 255, 0) 100%);
+        }
+        .fixed-top {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
     .Section {
         padding: 6rem 0;
 
@@ -21,7 +32,7 @@
     header,
     footer {
         .inner {
-            max-width:128rem;
+            max-width: 128rem;
             height: 100%;
             position: relative;
             margin: auto;
@@ -32,6 +43,7 @@
 h2.tit {
     font-size: 7.3rem;
     font-weight: 200;
+    line-height: 1;
 }
 
 p.txt {
@@ -66,7 +78,7 @@ a.btn {
     }
 
     &:hover {
-        border: .1rem solid var(--secondary);
+        // border: .1rem solid var(--secondary);
         color: var(--secondary);
 
         &:after {
