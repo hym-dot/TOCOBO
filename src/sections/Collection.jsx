@@ -41,7 +41,7 @@ const Collection = () => {
         loop={true}
         pagination={{
           type: 'progressbar',
-        }}
+        }}        
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         modules={[Pagination, Navigation]}
       >

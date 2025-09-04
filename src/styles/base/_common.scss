@@ -26,6 +26,10 @@
         &#Hero {
             padding: 0;
         }
+        &#Collection{
+            background-color: var(--bg2);
+            padding: 10rem 0;
+        }
     }
 
     .Section,
@@ -86,4 +90,9 @@ a.btn {
         }
     }
 
+}
+
+@keyframes up {
+    from{transform: translateY(0);}
+    to{transform: translateY(2rem);}
 }
