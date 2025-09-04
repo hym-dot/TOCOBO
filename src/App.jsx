@@ -13,6 +13,7 @@ import Hello from "./sections/Hello"
 import Collection from "./sections/Collection"
 import Skincare from "./sections/Skincare"
 import Instargram from "./sections/Instargram"
+
 function App() {
 
   const [topBanner, setTopBanner] = useState("")
