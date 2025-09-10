@@ -1,6 +1,9 @@
 import React from 'react'
-import skincare from '../util/skincare'
-
+import skincare from "../util/skincare"
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import "../styles/sections/skincare.scss"
 const Skincare = () => {
   return (
     <div className='inner skincare-inner'>
@@ -16,6 +19,30 @@ const Skincare = () => {
         <a href="#" className="btn">
           MEET TOCOBO
         </a>
+      </div>
+      <div className="slider-wrap">
+        <div className="in">
+
+          <Swiper
+            slidesPerView={2}
+            spaceBetween={30}
+            className="skincare-slider"
+            loop={true}
+          >
+            {skincare.map((sl) => (
+              <SwiperSlide
+                style={{
+                  backgroundImage: `url(${sl.image})`
+                }}
+                key={sl.id}>
+                <a href={sl.link}>
+                  {sl.id}
+                </a>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
       </div>
     </div>
   )
