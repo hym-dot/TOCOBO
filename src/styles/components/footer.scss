@@ -2,6 +2,7 @@ footer {
     border-top: .1rem solid var(--primary);
     padding: 7rem 0 5rem;
 
+
     .inner.foot-inner {
         display: flex;
         justify-content: space-between;
@@ -9,6 +10,10 @@ footer {
         margin: auto;
         position: relative;
         gap: 5rem;
+        
+        .sns-links {
+            justify-content: space-between;
+        }
 
         .left {
             flex: 1;
@@ -33,22 +38,14 @@ footer {
                 >div {
                     flex: 1;
 
-                    h4 {
-                        font-size: 1.8rem;
-                        color: var(--primary);
-                        font-family: "Source Serif Pro", serif;
-                        font-style: italic;
-                        font-weight: 400;
-                        margin-bottom: 2.5rem;
-                    }
-
                     ul li a {
                         display: block;
                         line-height: 1;
-                        font: 1.5rem;
+                        font-size: 1.5rem;
                         margin-top: 1.2rem;
                         color: var(--muted);
                     }
+
                 }
             }
         }
@@ -68,7 +65,6 @@ footer {
                 font-size: 1.4rem;
                 color: #5b5b5b;
                 line-height: 2.2rem;
-
             }
 
             .talk-btn {
@@ -80,11 +76,11 @@ footer {
                 margin-top: 2rem;
                 color: var(--primary);
                 transition: all .3s;
-            }
 
-            .talk-btn:hover {
-                background-color: var(--primary);
-                color: #fff;
+                &:hover {
+                    background-color: var(--primary);
+                    color: #fff;
+                }
             }
 
             .footer-legal {
@@ -107,7 +103,8 @@ footer {
                 font-size: 1.2rem;
                 padding: 3rem 0 6rem;
             }
-            .legal-links a{
+
+            .legal-links a {
                 display: inline-block;
                 margin-right: 2rem;
                 font-size: 1.3rem;
