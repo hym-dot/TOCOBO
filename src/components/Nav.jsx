@@ -18,6 +18,9 @@ const Nav = () => {
 
   return (
     <nav>
+      <button className="mod-nav">
+        <img src="/img/icon_ham.svg" alt="" className="" />
+      </button>
       <ul>
         {navLink.map((item) => (
 
