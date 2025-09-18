@@ -64,3 +64,7 @@ export const heroSlides = [
     order: 4,
   },
 ];
+
+// 활성 슬라이드만 가져오기
+export const getActiveHeroSlides = () =>
+  heroSlides.filter(s => s.active).sort((a, b) => a.order - b.order);
