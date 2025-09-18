@@ -16,30 +16,28 @@
     }
 
     .collection-slider {
-        position: relative;
+        .info-tit {}
 
-        // --- STYLES ADDED HERE ---
-        .info-tit {
-            display: inline-block; // To make the border fit the text
-            border: 1px solid #0493cb;
-            color: #0493cb;
-            padding: 0.8rem 2rem;
-            border-radius: 50px; // For the pill shape
-            font-size: 1.6rem;
-            margin-bottom: 2rem;
-        }
+        .kname {}
 
-        .name {
-            font-family: serif; // For the elegant look
-            font-size: 2.8rem;
-            color: #222;
-            margin-bottom: 0.5rem;
-        }
+        .name {}
 
-        .k-name {
-            font-size: 1.8rem;
-            color: #555;
-            margin-bottom: 2.5rem;
+        .info-wrap { /* 추가: info-wrap 스타일 */
+            padding-bottom: 2rem; /* 이미지와 텍스트 정보 간의 간격 */
+            .info-tit {
+                font-weight: bold;
+                font-size: 1.8rem;
+                margin-bottom: 0.5rem;
+            }
+            .name {
+                font-size: 1.6rem;
+                color: var(--secondary);
+                margin-bottom: 0.3rem;
+            }
+            .k-name {
+                font-size: 1.4rem;
+                color: gray;
+            }
         }
 
         .img-wrap {
@@ -57,6 +55,7 @@
                 height: 110%;
                 width: 110%;
                 animation: up 2s infinite alternate;
+                object-fit: cover; /* 이미지가 잘리지 않도록 조정 */
             }
         }
 
@@ -72,7 +71,7 @@
         }
 
         @media screen and (max-width:1200px) {
-            width: clamp(90rem, 90vw, 110rem);
+            /* width: clamp(90rem, 90vw, 110rem); */ /* 이 부분은 swiper의 컨테이너 크기에 따라 조절해주세요. */
 
             .img-wrap {
                 width: clamp(25rem, 26vw, 30rem);
@@ -81,11 +80,9 @@
 
             .swiper-pagination {
                 width: 90vw;
-                margin: 3rem 0;
+                margin: 3rem auto; /* 중앙 정렬을 위해 auto 추가 */
             }
         }
-
-
     }
 
     .prev,
@@ -94,21 +91,28 @@
         top: 70%;
         transform: translateY(-50%);
         display: block;
-        width: 3.5rem;
-        height: 6.7rem;
-        
+        width: 3.5rem; /* 이미지 크기에 맞게 조절 */
+        height: 6.7rem; /* 이미지 크기에 맞게 조절 */
+        background-repeat: no-repeat; /* 반복 방지 */
+        background-size: contain; /* 이미지 크기 조절 */
+        text-indent: -9999px; /* 텍스트 숨기기 */
+        overflow: hidden; /* 텍스트가 넘치는 것을 방지 */
+        z-index: 10; /* 다른 요소 위에 표시되도록 */
     }
 
     .prev {
-        left: -5rem;
-        background-image: url('/img/pd_slide_arrow_next.png');
-        background-repeat: no-repeat;
-       
+        left: -5rem; /* 필요에 따라 위치 조절 */
+        background-image: url('/img/review_arrow_prev.png');
     }
 
     .next {
-        right: -5rem;
-        background-image: url('/img/pd_slide_arrow_next.png');
-        background-repeat: no-repeat;
+        right: -5rem; /* 필요에 따라 위치 조절 */
+        background-image: url('/img/review_arrow_next.png');
     }
+}
+
+/* 추가 애니메이션 키프레임 (만약 `up` 애니메이션이 정의되지 않았다면) */
+@keyframes up {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-5%); } /* 위로 약간 이동하는 효과 */
 }

@@ -6,7 +6,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { heroSlides } from "../util/hero";
 import "../styles/sections/hero.scss";
-
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1111);
 
@@ -15,7 +14,7 @@ const Hero = () => {
 
     window.addEventListener("resize", handleResize);
 
-    return()=> window.removeEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
@@ -37,7 +36,11 @@ const Hero = () => {
           <SwiperSlide
             key={slide.id}
             className={`hero-slide ${slide.id}`}
-            style={{ backgroundImage: `url(${isMobile? slide.image.mobile:slide.image.desktop})` }}
+            style={{
+              backgroundImage: `url(${
+                isMobile ? slide.image.mobile : slide.image.desktop
+              })`,
+            }}
           >
             <div className="inner">
               <div className="t-wrap">
