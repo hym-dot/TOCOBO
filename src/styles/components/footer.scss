@@ -2,7 +2,6 @@ footer {
     border-top: .1rem solid var(--primary);
     padding: 7rem 0 5rem;
 
-
     .inner.foot-inner {
         display: flex;
         justify-content: space-between;
@@ -10,9 +9,15 @@ footer {
         margin: auto;
         position: relative;
         gap: 5rem;
-        
-        .sns-links {
-            justify-content: space-between;
+
+        @media screen and (max-width:1719px) {
+            padding: 0 2rem;
+            gap: 3rem;
+        }
+
+        @media screen and (max-width:1111px) {
+            flex-direction: column;
+            padding: 0 2rem 10rem;
         }
 
         .left {
@@ -26,6 +31,12 @@ footer {
                 color: #5b5b5b;
                 font-size: 1.3rem;
                 line-height: 2.5rem;
+            }
+
+            @media screen and (max-width:1111px) {
+                .footer-legal {
+                    display: none;
+                }
             }
         }
 
@@ -47,6 +58,10 @@ footer {
                     }
 
                 }
+            }
+
+            @media screen and (max-width:1111px) {
+                display: none;
             }
         }
 
@@ -76,15 +91,67 @@ footer {
                 margin-top: 2rem;
                 color: var(--primary);
                 transition: all .3s;
-
                 &:hover {
                     background-color: var(--primary);
                     color: #fff;
                 }
             }
 
+            /* --- 추가된 코드 --- */
+            .sns-links {
+                display: flex; /* 아이콘들을 가로로 정렬 */
+                gap: 3rem; /* 아이콘 사이의 간격 추가 */
+                margin-top: 5rem; /* '1:1 TALK' 버튼과의 상단 여백 추가 */
+            }
+            /* --- 여기까지 --- */
+
             .footer-legal {
                 display: none;
+            }
+
+            @media screen and (max-width:1111px) {
+                .footer-legal {
+                    display: block;
+                }
+
+                .cus-wrap {
+                    border-top: .1rem solid var(--line);
+                    border-bottom: .1rem solid var(--line);
+                    padding: 1.5rem 0;
+                    margin-bottom: 2rem;
+
+                    h4 {
+                        position: relative;
+                        margin-bottom: 0;
+                        .m-plus,
+                        .m-plus::after {
+                            display: block;
+                            content: "";
+                            width: 1.4rem;
+                            height: .2rem;
+                            position: absolute;
+                            background-color: var(--primary);
+                            right: 0;
+                            top: 50%;
+                            transition: all .3s;
+                        }
+                        .m-plus::after {
+                            transform: rotate(90deg);
+                        }
+                    }
+                    .hidden {
+                        height: 0;
+                        overflow: hidden;
+                        transition: height 0.4s ease;
+                    }
+                    &.open {
+                        h4{
+                            .m-plus::after {
+                                transform: rotate(0deg);
+                            }
+                        }
+                    }
+                }
             }
         }
 

@@ -32,9 +32,13 @@ export const headerData = {
     },
 
     utils: [
+        { id: "cart", label: "장바", icon: img("icon_language.svg"), href: "#" },
         { id: "search", label: "검색", icon: img("icon_search.svg"), href: "#" },
         { id: "account", label: "마이", icon: img("icon_myp.svg"), href: "#" },
         { id: "cart", label: "장바", icon: img("icon_cart.svg"), href: "#" },
+
+
+
     ],
 
 

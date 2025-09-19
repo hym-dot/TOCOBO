@@ -5,6 +5,7 @@ import MNav from './MNav'
 import useSmoothScroll from '../hooks/useSmoothScroll'
 import { headerData } from '../util/header'
 import "../styles/components/header.scss"
+
 const Header = ({ mNavOpen, onNavOpen, onNavClose }) => {
 
   const headerLogo = headerData.logo

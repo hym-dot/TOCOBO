@@ -30,7 +30,7 @@ const Collection = () => {
   return (
     <div className='inner collection-inner'>
       <div className="t-wrap">
-        <h2 className='tit'>TOCOBO <br /> COLLECTION</h2>
+        <h2 className='tit'>TOCOBO COLLECTION</h2>
         <p className="txt">Shop By Category
         </p>
       </div>
