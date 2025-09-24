@@ -3,12 +3,12 @@ import skincare from "../util/skincare"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-
+import "../styles/sections/skincare.scss"
 const Skincare = () => {
   return (
-    // 👇 여기에 id="skincare"를 추가하세요.
-    <div id="skincare" className='inner skincare-inner'>
+    <div className='inner skincare-inner'>
       <div className="t-wrap">
+
         <h2 className="tit" >
           Vegan Skincare
         </h2>
@@ -21,24 +21,28 @@ const Skincare = () => {
         </a>
       </div>
       <div className="slider-wrap">
-        <Swiper
-          slidesPerView={2}
-          spaceBetween={30}
-          className="skincare-slider"
-          loop={true}
-        >
-          {skincare.map((sl) => (
-            <SwiperSlide
-              style={{
-                backgroundImage: `url(${sl.image})`
-              }}
-              key={sl.id}>
-              <a href={sl.link}>
-                {sl.id}
-              </a>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <div className="in">
+
+          <Swiper
+            slidesPerView={2}
+            spaceBetween={30}
+            className="skincare-slider"
+            loop={true}
+          >
+            {skincare.map((sl) => (
+              <SwiperSlide
+                style={{
+                  backgroundImage: `url(${sl.image})`
+                }}
+                key={sl.id}>
+                <a href={sl.link}>
+                  {sl.id}
+                </a>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
       </div>
     </div>
   )
